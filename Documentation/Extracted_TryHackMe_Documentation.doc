@@ -1,0 +1,28 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Aptos;}}
+\fs32\b EXTRACTED - TRYHACKME FORENSIC WALKTHROUGH\b0\par
+\fs22 Public portfolio edition\par
+\par
+\b Executive Summary\b0\par
+PCAP-driven investigation covering HTTP PowerShell delivery, TCP stream recovery, Base64/XOR reversal, KeePass process-dump analysis, candidate credential validation, and KeePass vault inspection.\par
+\par
+\b Investigation Chain\b0\par
+PCAP -> HTTP PowerShell -> TCP/1337 + TCP/1338 -> Base64 -> XOR -> .dmp + .kdbx -> memory analysis -> validation\par
+\par
+\b 1. Evidence and Triage\b0\par
+The capture reveals an HTTP-delivered PowerShell script. The payload identifies two exfiltration paths: TCP/1337 for a process dump and TCP/1338 for a KeePass database.\par
+\par
+\b 2. Recovery\b0\par
+Reverse Base64 first, then apply the correct single-byte XOR key. Validate the outputs with file and strings.\par
+\par
+\b 3. Memory Forensics\b0\par
+A KeePass process dump may contain runtime credential material. Dedicated dump-analysis tooling can recover candidate key material; unknown characters should be validated against the recovered database rather than trusted blindly.\par
+\par
+\b 4. Vault Validation\b0\par
+Use keepass2john/John the Ripper to verify candidates and KeePassXC CLI to confirm access to the target entry.\par
+\par
+\b Public Safety\b0\par
+The original flag, exact master password, and unique vault UUID are intentionally redacted.\par
+\par
+Flag: THM\{FLAG_REDACTED\}\par
+}

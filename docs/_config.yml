@@ -1,0 +1,8 @@
+title: "Extracted | TryHackMe"
+description: "PCAP-driven credential recovery and KeePass memory forensics"
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true

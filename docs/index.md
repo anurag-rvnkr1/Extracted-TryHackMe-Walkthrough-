@@ -2,10 +2,9 @@
 layout: default
 title: "Extracted | TryHackMe Digital Forensics Walkthrough"
 description: "Professional DFIR portfolio documenting packet capture analysis, PowerShell malware investigation, TCP stream reconstruction, KeePass memory forensics, and credential recovery."
-permalink: /
 ---
 
-<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="assets/css/custom.scss">
 
 <div align="center">
 

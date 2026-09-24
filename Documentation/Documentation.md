@@ -18,17 +18,7 @@ tags:
 
 > **Digital Forensics • Network Traffic Analysis • Memory Forensics • Credential Recovery**
 
----
 
-<p align="center">
-<img src="../docs/assets/01_wireshark_powershell_delivery.png" width="100%">
-</p>
-
-<p align="center">
-<b>Figure 01 — Initial evidence discovered during packet capture analysis.</b>
-</p>
-
----
 
 ## Document Classification
 
